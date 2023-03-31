@@ -1,3 +1,5 @@
 import { Product } from "../entities/product.entity";
 
-export const products: Product[] = [];
+const products: Product[] = [];
+
+export default products;

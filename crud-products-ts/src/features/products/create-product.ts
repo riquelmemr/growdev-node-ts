@@ -1,8 +1,14 @@
-import { products } from "../../database";
+import products from "../../database";
 import { Product } from "../../entities/product.entity";
 
 function createProduct(product: Product) {
-  products.push(product);
+  const productFound = products.find(item => item.name === product.name);
+
+  if (productFound) {
+    console.log("Product found: " + product.name);
+  } else {
+    products.push(product);
+  }
 }
 
 export default createProduct;

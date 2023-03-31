@@ -9,7 +9,7 @@ interface Product {
 
 interface Category {
   name: string;
-  tags: Tag;
+  tags: Tag[];
 }
 
 type Gender = 'Eletrônicos' | 'Eletrodomésticos' | 'Gamer'
