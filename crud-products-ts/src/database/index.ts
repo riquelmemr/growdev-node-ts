@@ -1,4 +1,4 @@
-import { Product } from "../entities/product.entity";
+import { Product } from "../types/product";
 
 const products: Product[] = [];
 

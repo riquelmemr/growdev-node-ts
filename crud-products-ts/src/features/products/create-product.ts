@@ -1,5 +1,5 @@
 import products from "../../database";
-import { Product } from "../../entities/product.entity";
+import { Product } from "../../types/product";
 
 function createProduct(product: Product) {
   const productFound = products.find(item => item.name === product.name);
