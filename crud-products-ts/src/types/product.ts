@@ -7,13 +7,7 @@ interface Product {
   gender: Gender;
 }
 
-interface UpdateProduct {
-  name?: string;
-  price?: number;
-  quantity?: number;
-  category?: Category;
-  gender?: Gender;
-}
+type UpdateProduct = Omit<Partial<Product>, "id">
 
 interface Category {
   name: string;

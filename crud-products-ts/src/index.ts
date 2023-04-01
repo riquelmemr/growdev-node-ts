@@ -51,7 +51,7 @@ createProduct({
 });
 
 // Delete
-// deleteProduct("324234234234");
+deleteProduct("324234234234");
 
 // Update
 updateProduct("4234234234", {
