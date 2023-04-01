@@ -10,9 +10,7 @@ function listProducts() {
         return;
     }
     database_1.default.forEach((product) => {
-        let valueInShop = 0;
-        valueInShop = product.price * product.quantity;
-        console.log(`ID: ${product.id} | Name: ${product.name} | Price: ${product.price} | Stock: ${product.quantity} | Value In Shop: ${valueInShop}`);
+        console.log(`ID: ${product.id} | Name: ${product.name} | Price: ${product.price} | Stock: ${product.quantity}`);
     });
 }
 exports.default = listProducts;
