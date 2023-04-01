@@ -1,6 +1,7 @@
 import products from "./database";
-import { createProduct, deleteProduct, updateProduct } from "./features/products";
+import { addTag, createProduct, deleteProduct, listByCategory, listByPrices, listProducts, updateProduct, listByTag, listById } from "./features/products";
 
+// Creates
 createProduct({
   id: "4234234234",
   name: "Teclado Redragon",
@@ -43,16 +44,46 @@ createProduct({
   price: 70.9,
   quantity: 1,
   category: {
-    name: "Periféricos",
+    name: "Operativos",
     tags: ["Usados"],
   },
   gender: "Eletrônicos",
 });
 
-deleteProduct("324234234234");
+// Delete
+// deleteProduct("324234234234");
+
+// Update
 updateProduct("4234234234", {
-    name: "Teclado Redragon Editado ZZ MALL",
+    name: "Teclado Redragon Editado",
     quantity: 1000
 })
 
+// List
 console.log(products);
+
+// List All Products
+console.log('--------- List All Products ---------');
+listProducts();
+console.log();
+
+// List By Tag
+console.log('--------- List By Tag ---------');
+listByTag("Usados");
+console.log();
+
+// List By Category
+console.log('--------- List By Category ---------');
+listByCategory("Periféricos");
+console.log();
+
+// List By Price
+console.log('--------- List By Price ---------');
+listByPrices(100, 200);
+console.log();
+
+// Add Tag
+console.log('--------- Add Tag ---------');
+addTag("4234234234", "Black Friday"); 
+listById("4234234234");
+

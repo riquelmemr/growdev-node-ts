@@ -2,7 +2,7 @@ import products from "../../database";
 import { UpdateProduct } from "../../types/product";
 
 function updateProduct(id: string, updateProduct: UpdateProduct) {
-  const product = products.findIndex(product => product.id === id);
+  const product = products.findIndex((product) => product.id === id);
 
   if (product === -1) {
     console.log("Product not found");
@@ -11,8 +11,8 @@ function updateProduct(id: string, updateProduct: UpdateProduct) {
 
   products[product] = {
     ...products[product],
-    ...updateProduct
-  }
+    ...updateProduct,
+  };
 }
 
 export default updateProduct;

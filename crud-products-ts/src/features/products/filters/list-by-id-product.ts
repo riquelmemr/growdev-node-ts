@@ -1,7 +1,8 @@
-import products from "../../database";
+import products from "../../../database";
+
 
 function listById(id: string) {
-  const product = products.find(product => product.id === id);
+  const product = products.find((product) => product.id === id);
 
   if (!product) {
     console.log("Product not found");
